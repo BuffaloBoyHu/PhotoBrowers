@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0F9ABDBD1E27D1EF003CB277 /* PBViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0F9ABDBC1E27D1EF003CB277 /* PBViewController.m */; };
+		0F9ABDC01E27D203003CB277 /* ChildViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0F9ABDBF1E27D203003CB277 /* ChildViewController.m */; };
 		3E56EDA652E061ABFD0A5D9E /* libPods-PhotoBrowersTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A5675CC0DAF896CA4D5A983D /* libPods-PhotoBrowersTests.a */; };
 		3FFBE45A2B99483D69058351 /* libPods-PhotoBrowersUITests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 652AC701B410F077E04E7B52 /* libPods-PhotoBrowersUITests.a */; };
 		7A5645C41E279BB200AAA076 /* PhotoBrowerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A5645C31E279BB200AAA076 /* PhotoBrowerViewController.m */; };
@@ -41,6 +43,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0F9ABDBB1E27D1EF003CB277 /* PBViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PBViewController.h; sourceTree = "<group>"; };
+		0F9ABDBC1E27D1EF003CB277 /* PBViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PBViewController.m; sourceTree = "<group>"; };
+		0F9ABDBE1E27D203003CB277 /* ChildViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChildViewController.h; sourceTree = "<group>"; };
+		0F9ABDBF1E27D203003CB277 /* ChildViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChildViewController.m; sourceTree = "<group>"; };
 		3464A9FD068F8EAB34568A76 /* Pods-PhotoBrowers.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PhotoBrowers.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PhotoBrowers/Pods-PhotoBrowers.debug.xcconfig"; sourceTree = "<group>"; };
 		47DAB6F0B453BD54684D1650 /* libPods-PhotoBrowers.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-PhotoBrowers.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		652AC701B410F077E04E7B52 /* libPods-PhotoBrowersUITests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-PhotoBrowersUITests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -121,6 +127,10 @@
 				7A5645C31E279BB200AAA076 /* PhotoBrowerViewController.m */,
 				7A5645C51E279D3000AAA076 /* PBImageView.h */,
 				7A5645C61E279D3000AAA076 /* PBImageView.m */,
+				0F9ABDBB1E27D1EF003CB277 /* PBViewController.h */,
+				0F9ABDBC1E27D1EF003CB277 /* PBViewController.m */,
+				0F9ABDBE1E27D203003CB277 /* ChildViewController.h */,
+				0F9ABDBF1E27D203003CB277 /* ChildViewController.m */,
 			);
 			name = Class;
 			sourceTree = "<group>";
@@ -484,8 +494,10 @@
 			files = (
 				7A5645C41E279BB200AAA076 /* PhotoBrowerViewController.m in Sources */,
 				7A5645C71E279D3000AAA076 /* PBImageView.m in Sources */,
+				0F9ABDC01E27D203003CB277 /* ChildViewController.m in Sources */,
 				7A6EDBDB1E279AA800AD594C /* ViewController.m in Sources */,
 				7A6EDBD81E279AA800AD594C /* AppDelegate.m in Sources */,
+				0F9ABDBD1E27D1EF003CB277 /* PBViewController.m in Sources */,
 				7A6EDBD51E279AA800AD594C /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
