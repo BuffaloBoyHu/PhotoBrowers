@@ -24,11 +24,18 @@
     self.imageView = [[PBImageView alloc] initWithFrame:self.view.bounds];
     [self.imageView setImageWithUrl:[self.urlArray firstObject]];
     [self.scrollView addSubview:self.imageView];
-    self.scrollView.contentSize = self.view.bounds.size;
     
     __weak typeof(self) weakSelf = self;
     self.imageView.imageViewBlock = ^(UIImage *image){
         weakSelf.scrollView.contentSize = image.size;
+        CGFloat ratio = weakSelf.view.frame.size.width / image.size.width;
+        CGRect frame = weakSelf.imageView.frame;
+        CGSize size = image.size;
+        size.width *= ratio;
+        size.height *= ratio;
+        frame.size = size;
+        [weakSelf.imageView setFrame:frame];
+        weakSelf.imageView.center = weakSelf.scrollView.center;
     };
 }
 
@@ -61,6 +68,13 @@
 
 - (UIView *)viewForZoomingInScrollView:(UIScrollView *)scrollView {
     return _imageView;
+}
+
+- (void)scrollViewDidZoom:(UIScrollView *)scrollView {
+    CGFloat offsetX = (scrollView.bounds.size.width > scrollView.contentSize.width)? (scrollView.bounds.size.width - scrollView.contentSize.width) / 2 : 0;
+    CGFloat offsetY = (scrollView.bounds.size.height > scrollView.contentSize.height)? (scrollView.bounds.size.height - scrollView.contentSize.height) / 2 : 0;
+    CGPoint center = CGPointMake(scrollView.contentSize.width / 2 + offsetX, scrollView.contentSize.height / 2 + offsetY);
+    self.imageView.center = center;
 }
 
 @end
